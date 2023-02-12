@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "lists.h"
+#include "list.h"
 link freelist;
 void construct(int N)
 {

@@ -3,8 +3,7 @@ using namespace std;
 
 static const int N = 1000;
 int main()
-{
-	int i, p, q, id[N];
+{	int i, p, q, id[N];
 	for (i = 0; i < N; i++) id[i] = i;
 	while (cin >> p >> q){
 		int t = id[p];
