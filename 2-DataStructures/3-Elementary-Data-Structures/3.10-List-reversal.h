@@ -1,3 +1,5 @@
+#include <list.h>
+
 link reverse(link x)
 {
     link t, y = x, r = 0;

@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <iostream>
+#include "list.h"
 using namespace std;
-struct node
-{ int v; node* next;
-  node(int x, node* t)
-    {v = x; next = t;}
-};
-typedef node * link;
+
 int main()
 {
     const int V = 10;

@@ -1,22 +1,23 @@
 #include <iostream>
-#include <stdio.h>
-#include <list.h>
+#include <stdlib.h>
+#include "list.h"
 
 using namespace std;
-int main()
+
+int main(int argc, char* argv[])
 {
-    int i, N;
-    cin>>i;
-    i=N;
+    int i, N = atoi(argv[1]), M = atoi(argv[2]);
     Node t, x;
     construct(N);
-    for(i = 2, x = newNode(1); i<=N;i++)
-    { t = newNode(i); insert(x, t); x = t;
-    while(x!=next(x))
-    {for(i = 1;i < M; i++)x = next(x);
+    for (i = 2, x = newNode(1); i <= N; i++)
+    {
+        t = newNode(i); insert(x, t); x = t;
+    }
+    while (x != next(x))
+    {
+        for (i = 1; i < M; i++) x = next(x);
         deleteNode(remove(x));
-    }      
-    cout<<item(x)<<endl;
+    }
+    cout << item(x) << endl;
     return 0;
 }
-

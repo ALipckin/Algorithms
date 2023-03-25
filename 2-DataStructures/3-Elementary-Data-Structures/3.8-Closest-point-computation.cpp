@@ -14,5 +14,5 @@ int main(int argc, char *argv[])
      for(i = 0; i < N; i++)
        for(int j = i+1; j < N; j++)
          if (distance(a[i], a[j]) < d) cnt++;
-     cout << cnt << " пар в радиусе " << d << endl;
+     cout << cnt << " pairs within " << d << endl;
   }

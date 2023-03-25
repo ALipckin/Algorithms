@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
-#include "point.h"
+#include <Point.h>
 using namespace std;
 
 struct node{
@@ -20,18 +20,12 @@ void gridinsert(float x, float y){
        if(distance(s->p, t->p) < d)cnt++;
     grid[X][Y] = t;
 }
-
-node **malloc2d(int r, int c){
-    node *t = new node(0,0)[r];
-    for(int i = 0; i < r; i++)
-    t[i] = new node(0,0)[c];
+link** malloc2d(int r, int c)
+{
+    link** t = new link* [r];
+    for (int i = 0; i < r; i++)
+        t[i] = new link[c];
     return t;
-}
-
-float randFloat(){
-   float r = 0.0 + static_cast <float> (rand())
-   /( static_cast <float> (RAND_MAX/(4.0)));
-    return r;
 }
 
 int main(int argc, char *argv[])
@@ -44,6 +38,5 @@ int main(int argc, char *argv[])
  for(i=0; i < N; i++)
    gridinsert(randFloat(), randFloat());
    cout<<cnt<<"pairs in a radius of "<<d<<endl;
-
     return 0;
 }
