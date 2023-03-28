@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string.h>
-#include "STACK.cxx"
+#include <STACK.h>
+
+using namespace std;
+
 int main(int argc, char *argv[])
 {   char *a = argv[1]; int N = strlen(a);
     STACK<int>save(N);
@@ -13,5 +16,5 @@ int main(int argc, char *argv[])
         while((a[i]>='0')&&(a[i]<='9'))
           save.push(10*save.pop()+(a[i++]-'0'));
     }
-  cout<<save.pop()>>endl;
+  cout<<save.pop()<<endl;
 }

@@ -1,9 +1,11 @@
 #include <iostream>
 #include <stdlib.h>
-#include "UF.cxx"
+#include "UF.h"
+
+using namespace std;
 
 int main(int argc, char *argv[])
-{ int p, q, N = atoi(argv[]);
+{ int p, q, N = atoi(argv[1]);
   UF info(N);
   while(cin >> p >> q)
     if(!info.find(p, q))
@@ -12,5 +14,3 @@ int main(int argc, char *argv[])
         cout << " " << p << " "<< q <<endl;
     }
 }
-
-

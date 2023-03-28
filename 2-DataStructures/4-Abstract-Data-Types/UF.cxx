@@ -1,3 +1,5 @@
+#include <IUF.h>
+
 class UF
 {
 private:

@@ -1,4 +1,6 @@
 #include <math.h>
+#include <cstdlib>
+
 class POINT{
     private:
      float x,y;

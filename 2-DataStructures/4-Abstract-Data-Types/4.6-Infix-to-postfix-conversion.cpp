@@ -1,6 +1,8 @@
-#include <iostream.h>
+#include <iostream>
 #include <string.h>
-#include "STACK.cxx"
+#include "STACK.h"
+
+using namespace std;
 
 int main(int argc, char *argv[])
 { char *a = argv[1]; int N = strlen(a);

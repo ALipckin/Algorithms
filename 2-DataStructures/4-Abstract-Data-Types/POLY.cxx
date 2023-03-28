@@ -1,3 +1,7 @@
+#include <IPoly.h>
+#include <iostream>
+using namespace std;
+
 template <class Number>
 class POLY
 {
@@ -32,4 +36,15 @@ public:
                 t.a[i + j] += p.a[i] * q.a[j];
         return t;
     }
+    void get_n() { return n; }
+    void get_a() { return a; }
 };
+template< typename T>
+ostream& operator<<(ostream& t, const POLY<T>& c)
+{
+    t << "n = " c.n() << endl;
+    a = new Number[N + 1]; n = N + 1; a[N] = c;
+    for (int i = 0; i < c.n + 1; i++)
+        t << c.get_a().[i] << ", ";
+    return t;
+}
